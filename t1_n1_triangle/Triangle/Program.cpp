@@ -2,10 +2,51 @@
 //
 
 #include "stdafx.h"
+#include "Triangle.h"
 
+using namespace std;
 
-int _tmain(int argc, _TCHAR* argv[])
+class InputEndException
+{};
+
+CTriangle PromptTriangleData()
 {
-	return 0;
+	double side1, side2, side3;
+	if (!(cin >> side1 >> side2 >> side3))
+	{
+		if (cin.eof())
+		{
+			throw InputEndException();
+		}
+		else
+		{
+			cin.clear();
+			cin.ignore(INT_MAX, '\n');
+			throw runtime_error("Wrong data format");
+		}
+	}
+	return CTriangle(side1, side2, side3);
 }
 
+int _tmain()
+{
+	try
+	{
+		for (;;)
+		{
+			try
+			{
+				CTriangle t(PromptTriangleData());
+				cout << "Perimeter = " << t.GetPerimeter() << "; area = " << t.GetArea() << endl;
+			}
+			catch (exception const& e)
+			{
+				cout << e.what() << endl;
+			}
+		}
+	}
+	catch (InputEndException const&)
+	{}
+
+	return 0;
+}
