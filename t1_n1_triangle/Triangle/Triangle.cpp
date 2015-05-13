@@ -12,9 +12,9 @@ CTriangle::CTriangle(double side1, double side2, double side3)
 	ThrowOnBadSideLength(2, m_side2);
 	ThrowOnBadSideLength(3, m_side3);
 
-	if (IsDegenerate())
+	if (!IsValid())
 	{
-		throw domain_error("Can't create degenerate triangle");
+		throw domain_error("Impossible to create triangle");
 	}
 }
 
@@ -62,11 +62,11 @@ bool CTriangle::SideIsTooBig(double testSide, double side1, double side2)
 	return (testSide > side1 + side2);
 }
 
-bool CTriangle::IsDegenerate() const
+bool CTriangle::IsValid() const
 {
 	return (
-		SideIsTooBig(m_side1, m_side2, m_side3) ||
-		SideIsTooBig(m_side2, m_side3, m_side1) ||
-		SideIsTooBig(m_side3, m_side1, m_side2)
+		!SideIsTooBig(m_side1, m_side2, m_side3) &&
+		!SideIsTooBig(m_side2, m_side3, m_side1) &&
+		!SideIsTooBig(m_side3, m_side1, m_side2)
 	);
 }

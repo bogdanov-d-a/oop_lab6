@@ -17,5 +17,5 @@ private:
 
 	static void ThrowOnBadSideLength(unsigned number, double value);
 	static bool SideIsTooBig(double testSide, double side1, double side2);
-	bool IsDegenerate() const;
+	bool IsValid() const;
 };
