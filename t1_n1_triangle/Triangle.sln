@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Triangle", "Triangle\Triangle.vcxproj", "{8B9AB289-C7F7-4C99-8555-685064CE7B2A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TriangleTester", "TriangleTester\TriangleTester.vcxproj", "{00B8D3AE-1EAC-4828-83D0-D68D26FEBF47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B9AB289-C7F7-4C99-8555-685064CE7B2A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8B9AB289-C7F7-4C99-8555-685064CE7B2A}.Debug|Win32.Build.0 = Debug|Win32
+		{8B9AB289-C7F7-4C99-8555-685064CE7B2A}.Release|Win32.ActiveCfg = Release|Win32
+		{8B9AB289-C7F7-4C99-8555-685064CE7B2A}.Release|Win32.Build.0 = Release|Win32
+		{00B8D3AE-1EAC-4828-83D0-D68D26FEBF47}.Debug|Win32.ActiveCfg = Debug|Win32
+		{00B8D3AE-1EAC-4828-83D0-D68D26FEBF47}.Debug|Win32.Build.0 = Debug|Win32
+		{00B8D3AE-1EAC-4828-83D0-D68D26FEBF47}.Release|Win32.ActiveCfg = Release|Win32
+		{00B8D3AE-1EAC-4828-83D0-D68D26FEBF47}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
